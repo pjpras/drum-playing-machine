@@ -1,0 +1,64 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1a202c, #2d3748);
+}
+
+#drum-machine {
+  padding: 1.5rem;
+  background-color: #4a5568;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+}
+
+#display {
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  background-color: #1a202c;
+  color: #48bb78;
+  font-family: monospace;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+}
+
+.drum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.drum-pad {
+  height: 5rem;
+  background: linear-gradient(to bottom, #4a5568, #2d3748);
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s, background 0.2s;
+}
+
+.drum-pad:hover {
+  background: linear-gradient(to bottom, #4a5568, #4a5568);
+}
+
+.drum-pad:active {
+  transform: translateY(2px);
+  background: linear-gradient(to bottom, #2d3748, #1a202c);
+}
